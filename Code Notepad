@@ -1,0 +1,13 @@
+@echo off
+setlocal enabledelayedexpansion
+
+for /f "tokens=2 delims=:" %%i in ('netsh wlan show profiles ^| findstr "All User Profile"') do (
+    set "profile=%%i"
+    set "profile=!profile:~1!"
+    echo ------------------------------
+    echo Wi-Fi Name: !profile!
+    netsh wlan show profile name="!profile!" key=clear | findstr "Key Content"
+)
+
+endlocal
+pause
