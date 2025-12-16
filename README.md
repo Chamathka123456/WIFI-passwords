@@ -1,5 +1,5 @@
 # WIFI-passwords
-give WIFI password you connected
+Batch Script to Reveal Saved Wi-Fi Passwords
 This project contains a Windows batch script that lists all saved Wi‑Fi profiles on a system and displays their stored passwords (if available).
 It uses the built‑in netsh command and works on Windows systems where the user has administrator privileges.
 
